@@ -1,0 +1,17 @@
+board = pyfirmata.Arduino('COM3')
+
+it = pyfirmata.util.Iterator(board)
+it.start()
+
+board.digital[2].mode = pyfirmata.INPUT
+
+
+
+
+while True:
+
+    sw = board.digital[2].read()
+    if sw is True:
+        REPLACE
+
+    time.sleep(0.1)
