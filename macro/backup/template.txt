@@ -1,0 +1,123 @@
+
+
+file = open('config.json','r+')
+json_dict = json.load(file)
+if json_dict["Select1"]==1:
+    OneSelectColour = "#8d02ff"
+else:
+    OneSelectColour = "white"
+
+def i():  
+    file = open('config.json','r+')
+    json_dict = json.load(file)
+    if json_dict["MainSelectOne"]==1:
+
+        file = open('config.json','r+')
+        json_dict = json.load(file)
+        #SELECTED
+        if json_dict["Select1"]==0:
+            print(json_dict["Select1"])
+            file = open('config.json','r+')
+            json_dict = json.load(file)
+            style = ttk.Style()
+            style.configure("C.TButton", foreground="black", background="#8d02ff")
+            json_dict["CodeButton1"]=i
+            json_dict["CodeButton2"]=0 
+            json_dict["CodeButton3"]=0 
+            json_dict["Select1"]=1
+            file.seek(0)
+            json.dump(json_dict,file, indent=4)
+            file.truncate()
+            file.close()
+        #NOT SELECTED
+        else:
+            print(json_dict["Select1"])
+            file = open('config.json','r+')
+            json_dict = json.load(file)
+            style = ttk.Style()
+            style.configure("C.TButton", foreground="black", background="white")
+            json_dict["Select1"]=0
+            json_dict["CodeButton3"]=0
+            json_dict["CodeButton1"]=0
+            json_dict["CodeButton2"]=0
+            file.seek(0)
+            json.dump(json_dict,file, indent=4)
+            file.truncate()
+            file.close()
+    if json_dict["MainSelectTwo"]==1:
+
+        file = open('config.json','r+')
+        json_dict = json.load(file)
+        #SELECTED
+        if json_dict["Select1"]==0:
+            print(json_dict["Select1"])
+            file = open('config.json','r+')
+            json_dict = json.load(file)
+            style = ttk.Style()
+            style.configure("C.TButton", foreground="black", background="#ff02f2")
+            json_dict["CodeButton2"]=i 
+            json_dict["CodeButton1"]=0 #n################################################################
+            json_dict["CodeButton3"]=0 #n################################################################
+            json_dict["Select1"]=1
+            file.seek(0)
+            json.dump(json_dict,file, indent=4)
+            file.truncate()
+            file.close()
+        #NOT SELECTED
+        else:
+            print(json_dict["Select1"])
+            file = open('config.json','r+')
+            json_dict = json.load(file)
+            style = ttk.Style()
+            style.configure("C.TButton", foreground="black", background="white")
+            json_dict["Select1"]=0
+            json_dict["CodeButton3"]=0
+            json_dict["CodeButton1"]=0
+            json_dict["CodeButton2"]=0
+            file.seek(0)
+            json.dump(json_dict,file, indent=4)
+            file.truncate()
+            file.close()
+
+    if json_dict["MainSelectthree"]==1:
+
+        file = open('config.json','r+')
+        json_dict = json.load(file)
+        #SELECTED
+        if json_dict["Select1"]==0:
+            print(json_dict["Select1"])
+            file = open('config.json','r+')
+            json_dict = json.load(file)
+            style = ttk.Style()
+            style.configure("C.TButton", foreground="black", background="#0f02ff")
+            json_dict["CodeButton3"]=i 
+            json_dict["CodeButton1"]=0 #n################################################################
+            json_dict["CodeButton2"]=0 #n################################################################
+
+            json_dict["Select1"]=1
+            file.seek(0)
+            json.dump(json_dict,file, indent=4)
+            file.truncate()
+            file.close()
+        #NOT SELECTED
+        else:
+            print(json_dict["Select1"])
+            file = open('config.json','r+')
+            json_dict = json.load(file)
+            style = ttk.Style()
+            style.configure("C.TButton", foreground="black", background="white")
+            json_dict["Select1"]=0
+            json_dict["CodeButton3"]=0
+            json_dict["CodeButton1"]=0
+            json_dict["CodeButton2"]=0
+            file.seek(0)
+            json.dump(json_dict,file, indent=4)
+            file.truncate()
+            file.close()
+
+
+style = ttk.Style()
+style.configure("C.TButton", foreground="black", background=OneSelectColour)
+
+i.button = Button(frame, text="Open Chrome",command=i, width=25,style="C.TButton") 
+i.button.grid(column=i, row=i,sticky=W) 
