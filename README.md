@@ -10,7 +10,7 @@ Features
 
 IMPORTANT
 -
-This project was originally developed in 2020 and functioned as intended at the time. After revisiting this script after awhile it no longer worked :(. 
+This project was originally developed in 2020 and functioned as intended at the time. After revisiting this script, it no longer worked.
 The exact Python version used during development is unknown.
 
 Despite this, the repository has been preserved as it represents one of my favorite projects.
