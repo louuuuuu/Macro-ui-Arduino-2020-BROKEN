@@ -4,8 +4,7 @@ Features
 - Delete and create config files
 - User has the ability to customize what the macro button does FULLY using eval
 - Option to select what button activates the macro on the Arduino board
-
-
+- Saves configs in a JSON file
 
 
 
